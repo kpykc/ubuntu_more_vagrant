@@ -1,0 +1,48 @@
+[user]
+    name = Oleksandr Lavrushchenko
+    email = kpykcb@gmail.com
+
+[alias]
+	ci = commit -a
+	co = checkout
+	st = status -a
+	cm = commit -m
+	cma = commit -am
+	df = diff
+	br = branch
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	lo = log --oneline
+	s = status -s
+[diff]
+    color = auto
+
+[pager]
+    color = true
+
+[status]
+    color = auto
+
+[color]
+        branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+	ui = auto
+
+[core]
+	editor = /usr/bin/vim
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
+[credential]
+	helper = osxkeychain
